@@ -1,0 +1,14 @@
+.list-group-item {
+  line-height: 2.5;
+}
+#exampleNote{
+  font-size: 12px;
+
+}
+.note{
+  font-size: 24px;
+  font-style: bold;
+}
+.scrape-new{
+  margin-right: 30px
+}
