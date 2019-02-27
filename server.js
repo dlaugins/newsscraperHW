@@ -25,7 +25,12 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/newsie", { useNewUrlParser: true });
+
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsie";
+
+mongoose.connect(MONGODB_URI);
+
 
 // Routes
 require("./routes/apiRoutes")(app);

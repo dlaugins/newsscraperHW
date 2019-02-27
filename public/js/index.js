@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
   }
   function deleteArticle() {
-  
+ 
     // This function is triggered when the user wants to save an article
     // When we rendered the article initially, we attached a javascript object containing the headline id
     // to the element using the .data method. Here we retrieve that.

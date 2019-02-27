@@ -10,5 +10,20 @@
   font-style: bold;
 }
 .scrape-new{
-  margin-right: 30px
+  margin-right: 30px;
+}
+.style_title{
+  font-size:100px;
+}
+.navbar-brand{
+  font-size:50px;
+ 
+}
+.caption{
+  font-style: bold;
+  
+}
+
+.nav-link{
+  font-size:25px;
 }
