@@ -38,7 +38,7 @@ module.exports = function (app) {
   });
 
   app.get("/api/clear", function (req, res) {
-    db.Article.deleteMany({}).then(function (clear) {
+    db.Article.deleteMany({saved:false}).then(function (clear) {
 
     })
       .catch(function (err) {
