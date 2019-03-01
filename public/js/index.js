@@ -41,12 +41,10 @@ $(document).ready(function() {
   }
   function deleteArticle() {
  
-    // This function is triggered when the user wants to save an article
-    // When we rendered the article initially, we attached a javascript object containing the headline id
-    // to the element using the .data method. Here we retrieve that.
+  
     event.preventDefault();
        var articleToDelete = $(this).attr('data')
-    // articleToSave.saved = true;
+    
     // Using a patch method to be semantic since this is an update to an existing record in our collection
     $.ajax({
       method: "DELETE",
@@ -68,14 +66,11 @@ $(document).ready(function() {
        var id = $(this).attr('data')
        var noteId = "#note" + id;
        var noteVal = $(noteId).val();
-       console.log("nodeId", noteId)
-       console.log("note", noteVal);
-       var noteData = { "note": noteVal };
-       console.log(id)
       
-    // articleToSave.saved = true;
-    // Using a patch method to be semantic since this is an update to an existing record in our collection
-
+       var noteData = { "note": noteVal };
+     
+      
+    
     
     $.ajax({
       method: "PUT",
@@ -89,11 +84,9 @@ $(document).ready(function() {
 
   function scrapeArticle() {
     event.preventDefault();
-    // This function handles the user clicking any "scrape new article" buttons
+    
     $.get("/api/fetch").then(function(data) {
-      // If we are able to successfully scrape the NYTIMES and compare the articles to those
-      // already in our collection, re render the articles on the page
-      // and let the user know how many unique articles we were able to save
+     
       location.reload();
     });
   }

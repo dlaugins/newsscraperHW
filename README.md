@@ -1,5 +1,4 @@
 # newsscraperHW
-# newsscraperHW
 
 What is this repo or project? 
 
